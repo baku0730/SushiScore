@@ -14,8 +14,10 @@ struct NewRecordView: View {
     var body: some View {
         NavigationStack{
             VStack(spacing: 20) {
+                Text("今日の散歩で撮った写真と歩数を記録しよう！")
+                    .font(.title3)
                 //ここにコードを書くよ！
-                TextField("点数を入力", text: $scoreText)
+                TextField("歩数を入力", text: $scoreText)
                     .keyboardType(.numberPad)
                     .padding()
                     .background(Color.gray.opacity(0.2))

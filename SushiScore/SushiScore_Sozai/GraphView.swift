@@ -16,7 +16,7 @@ struct GraphView: View {
             ForEach(records) { record in
                 LineMark(
                     x: .value("日付", record.date/*, unit: .day*/),
-                    y: .value("点数", record.score)
+                    y: .value("歩数", record.score)
                 )
                 .foregroundStyle(.yellow)
             }

@@ -8,13 +8,20 @@ struct ContentView: View {
     var body: some View {
         ZStack{
             VStack{
+                Text("散歩記録")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundStyle(.blue)
+                
+                Spacer()
+                
                 List{
                     GraphView(records: records)
                         .frame(height: 200)
                     ForEach(records) { record in
                         VStack{
                             HStack{
-                                Text("\(record.score)円")
+                                Text("\(record.score)歩")
                                     .font(.title2)
                                     .fontWeight(.bold)
                                     .foregroundStyle(record.score >= 0 ? Color.yellow : Color.blue)
@@ -43,7 +50,7 @@ struct ContentView: View {
                 Button{
                     showNewRecordView.toggle()
                 } label: {
-                    Text("点数を記録する \(Image(systemName: "plus.circle.fill"))")
+                    Text("歩数と写真を記録する \(Image(systemName: "plus.circle.fill"))")
                         .padding()
                         .background(Color.blue)
                         .foregroundStyle(.white)
