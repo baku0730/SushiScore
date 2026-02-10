@@ -16,8 +16,8 @@ struct ContentView: View {
                 Spacer()
                 
                 List{
-                    GraphView(records: records)
-                        .frame(height: 200)
+//                    GraphView(records: records)
+//                        .frame(height: 200)
                     ForEach(records) { record in
                         VStack{
                             HStack{
